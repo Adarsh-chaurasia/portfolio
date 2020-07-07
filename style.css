@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+
+/* 
+CONTENTS
+
+1. NAME CARD 
+2. WORK DETAILS CARD
+3. ABOUT ME CARD
+4. CONTACT ME CARD */
+
+body{
+    /* background-color: #F7F7F3; */
+    margin: 0px;
+    overflow-x: hidden;
+    /* align-items: center;
+    font-family: monospace;
+    justify-content: center;
+    background-color: #1d212b; */
+}
+
+   /* NAME CARD  */
+      
+.body-name-details{
+    height: 100vh;
+    width: 100vw;
+    /* border: 1px solid black; */
+    position: relative;
+}
+    
+     
+   
+.name-title{
+    position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+    text-align: center;
+    width: 86%;
+    height: 80%;
+    /* border: 1px solid black; */
+    animation: textColor 10s ease infinite;
+    background-color: whitesmoke;
+}
+
+.name-initials{
+    font-family: 'Sacramento', cursive;
+    font-size: 50px;
+    margin-top: 18vh;
+    color: #2E2E2E;
+}
+
+.name-full{
+    font-size: 150%;
+    font-family: 'Abel', sans-serif;
+    margin-block-start: 0;
+    color: #2E2E2E;
+
+}
+
+
+    /* TEXT ANIMATION  */
+
+
+
+.name-details-rotate,h2 {
+    font-weight: 200;
+    margin: 0.4em 0;
+    font-family: 'Raleway', sans-serif;
+  }
+
+.name-details-rotate {
+    font-size: 3.5em; 
+}
+  
+h2 {
+    color: #2E2E2E;
+    font-size: 2em;
+  }
+     
+     /* TEXT ANIMATION ENDS HERE */
+
+   /* NAME CARD BACKGROUND ANIMATION */
+
+.name-title:after {
+    position: absolute;
+    content: "";
+    top: 0vw;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(1);
+    -webkit-filter: blur(5vw);
+    -moz-filter: blur(5vw);
+    -ms-filter: blur(5vw);
+    filter: blur(5vw);
+    background: linear-gradient(270deg, #0fffc1, #7e0fff);
+    background-size: 200% 200%;
+    animation: animateGlow 10s ease infinite;
+}
+@keyframes animateGlow {
+    0% {
+        background-position: 0% 50%;
+   }
+    50% {
+        background-position: 100% 50%;
+   }
+    100% {
+        background-position: 0% 50%;
+   }
+}
+@keyframes textColor {
+    0% {
+        color: #7e0fff;
+   }
+    50% {
+        color: #0fffc1;
+   }
+    100% {
+        color: #7e0fff;
+   }
+}
+
+   /* ANIMATION ENDS */
+
+     /* WORK DETAIL CARD STARTS HERE */
+   
+.information-work{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 5vw;   
+}
+
+.card-web-details{
+    flex: 1;
+}
+
+.card-details{
+    height: 50vh;
+    width: 36vw;
+    border: 1px solid #E2E2E2;
+    padding: 7%;
+    margin: 100px 15px 40px 15px;
+    border-radius: 10px;
+}
+
+   /* WORK DETAILS CARD ICON */
+
+.card-icon{
+    position: absolute;
+    height: 6vw;
+    width: 6vw;
+    background-color: #5F479E;
+    margin: 60px 60px 0px 100px;
+    border-radius: 20px;
+}
+
+.card-title{
+    font-size: 2.5vw;
+    color: #4D5474;
+    font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card-text{
+    font-size: 1.8vw;
+    color: rgb(58, 57, 56);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 500;
+}
+   
+    /* ABOUT ME CARD */
+
+.card-about-me-details{
+    border: 1px solid #E2E2E2;
+    margin: 0 6% 6% 6%;
+    justify-content: space-around;
+    border-radius: 10px;
+    display: flex;
+    padding: 4%;
+}
+   
+    /* PORTFOLIO IMAGE SETTINGS */
+
+.card-about-image{
+    height: 400px;
+    width: 47%;
+    margin: 0 50px 0 0;
+    background-image: url(3618031.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.card-about-me-text{
+    font-size: 23px;
+    color: rgb(58, 57, 56);
+    width: 48%;
+    margin: auto;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 500;
+}
+
+.card-about-heading{
+    color: #4D5474;
+    font-size: 43px;
+    font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+
+    /* CONTACT ME CARD  */
+
+.card-contact-me{
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
+    margin: 0 6% 6% 6%;
+    padding: 4%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.card-contact-heading{
+    width: 45%;
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+    font-size: 4em;
+    color: #4D5474;
+}
+
+.card-contact-details{
+    padding-left: 50px;
+    width: 50%;
+    font-size: 30px;
+    color: rgb(58, 57, 56);
+}
+
+.contact-list{
+    list-style-type: none;
+}
+
+   
+
+    /* CONTACT ME ICON SETTINGS */
+
+
+.clip {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.svg--source {
+    display: none;
+}
+.svg--icon {
+    width: 100%;
+    max-width: 5rem;
+    height: 100%;
+    max-height: 5rem;
+    display: block;
+    margin: 0 auto;
+    fill: currentColor;
+}
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.share {
+    width: 5rem;
+    height: 5rem;
+    float: left;
+    margin: 0.5rem 1rem 0.5rem 0;
+    color: #353c4a;
+    border: 0.125rem solid #f3f3f3;
+    box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.15);
+    border-radius: 50%;
+    transition: 250ms;
+}
+.share:last-child {
+    margin-right: 0;
+}
+.share:focus {
+    outline-color: inherit;
+}
+.twitter:hover, .twitter:focus {
+    color: #00aced;
+    box-shadow: 0 0 24px 0 #00aced;
+}
+.github:hover, .github:focus {
+    color: #4183c4;
+    box-shadow: 0 0 24px 0 #4183c4;
+}
+
+.email:hover, .email:focus {
+    color: #FFC107;
+    box-shadow: 0 0 24px 0 #FFC107;
+}
+.linkedin:hover, .linkedin:focus {
+    color: #007BB5;
+    box-shadow: 0 0 24px 0 #007BB5;
+}
+
+
+
+
+  
+  
